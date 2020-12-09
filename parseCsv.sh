@@ -56,7 +56,7 @@ do
 		  GTYPE2=`echo $line | awk -F';' '{print $3}'`
 		  if [ "$IDREPORT" == "$IDREPORT2" ] && [ "$GTYPE" == "$GTYPE2" ]
 		  then
-		    echo "parshing proccess ReportID_${IDREPORT}_${CUSTOMER_NAME}_${GTYPE}.csv"
+		    echo "parshing proccess ReportID_${IDREPORT}_${CUSTOMER_NAME}_${GTYPE}"
 			
 		    echo ${j} >> ${SCHEDULE}/${GTYPE}/ReportID_${IDREPORT}_${CUSTOMER_NAME}_${GTYPE}.csv
 		  fi
