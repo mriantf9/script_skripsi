@@ -63,3 +63,5 @@ do
 		done < $LIST_RP
 	done
 done
+
+/usr/bin/rsync ${WORKDIR}/rsyncScript.sh
