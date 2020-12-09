@@ -27,7 +27,7 @@ DT=`date '+%Y-%m-%d'`
 TMP="$DIR/tmp"
 
 my_touch ${TMP}/list_report
-/usr/bin/mysql -u dashadmin -p34NGja0BGT1009 -e "use dash_report;SELECT report_id, customer_name,customer_email,report_title,graph_type, rrd_name, rrd_title, periodic_graph
+/usr/bin/mysql -u dashadmin -p@BangJago10 -e "use dash_report;SELECT report_id, customer_name,customer_email,report_title,graph_type, rrd_name, rrd_title, periodic_graph
 FROM reports
 JOIN graphs ON graphs.id = reports.graph_id
 JOIN users ON users.id = reports.user_id
