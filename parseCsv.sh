@@ -64,4 +64,4 @@ do
 	done
 done
 
-/usr/bin/rsync ${WORKDIR}/rsyncScript.sh
+/usr/bin/bash ${WORKDIR}/rsyncScript.sh
