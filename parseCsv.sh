@@ -43,11 +43,12 @@ rm -rf ${SCHEDULE}/Monthly/*
 
 for i in "${LIST_REPORT[@]}"
 do
-	cat $LIST_RP |  grep ";${i};" | awk -F';' 'BEGIN{OFS=";"} {print $1,$4,$5,$2}' | sort -u | while read line
+	cat $LIST_RP |  grep ";${i};" | awk -F';' 'BEGIN{OFS=";"} {print $1,$4,$5,$2, $8}' | sort -u | while read line
 	do
 		#echo "${line}"
 		IDREPORT=`echo $line | awk -F';' '{print $1}'`
 		GTYPE=`echo $line | awk -F';' '{print $3}'`
+		PERIODIC=`echo $line | awk -F';' '{print $5}'`
 		REPORT_NAME=`echo $line | awk -F';' '{print $2}' | sed 's/ /_/g'`
 		CUSTOMER_NAME=`echo $line | awk -F';' '{print $4}' | sed 's/ /_/g'`
 		while read j
@@ -58,7 +59,7 @@ do
 		  then
 		    echo "parshing proccess ReportID_${IDREPORT}_${CUSTOMER_NAME}_${GTYPE}"
 			
-		    echo ${j} >> ${SCHEDULE}/${GTYPE}/ReportID_${IDREPORT}_${CUSTOMER_NAME}_${GTYPE}.csv
+		    echo ${j} >> ${SCHEDULE}/${GTYPE}/ReportID_${IDREPORT}_${CUSTOMER_NAME}_${GTYPE}_per${PERIODIC}.csv
 		  fi
 		done < $LIST_RP
 	done
