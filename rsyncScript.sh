@@ -35,7 +35,8 @@ do
     my_touch ${LOG}/${DT}_${j}.log
     #echo $j
 	echo "Process Rsync ${i} File ${j}"
-    /usr/bin/rsync -r -av -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 21021" ${SCHEDULE}/${i}  root@localhost:${DT_REPORT}/ >> ${LOG}/${DT}_${j}.log
+    #/usr/bin/rsync -r -av -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 21021" ${SCHEDULE}/${i}  root@localhost:${DT_REPORT}/ >> ${LOG}/${DT}_${j}.log
+	/usr/bin/rsync -r -av -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 22" ${SCHEDULE}/${i}  mriantf@27.131.3.177:${DT_REPORT}/ >> ${LOG}/${DT}_${j}.log
   done
 done
 
