@@ -17,13 +17,16 @@ TMP="$WORKDIR/tmp"
 UNIQ=$1
 DTL="${DIR}/REALTIME/data_list"
 
-QUEUE="/var/www/html/skripsi/storage/app/realtime_task/"
+QUEUE="/var/www/html/skripsi/storage/app/realtime_task"
 
-mv ${QUEUE}/${UNIQ}* ${DIR}/REALTIME_QUEUE
+#rm -rf ${DIR}/REALTIME_QUEUE/*
 
-CSVFILE=`ls ${DIR}/REALTIME_QUEUE`
-for i in CSVFILE
+cp ${QUEUE}/* ${DIR}/REALTIME_QUEUE/
+
+ls ${DIR}/REALTIME_QUEUE > ${DIR}/REALTIME_QUEUE/tmp_list
+
+for i in `cat ${DIR}/REALTIME_QUEUE/tmp_list`
 do
     echo "Process Rsync ${i}"
-    /usr/bin/rsync -r -av -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 22" ${DIR}/REALTIME_QUEUE  mriantf@27.131.3.177:${DIR}/${DTL}
+    /usr/bin/rsync -r -av -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 22" ${DIR}/REALTIME_QUEUE/${i}  mriantf@27.131.3.177:${DTL}
 done

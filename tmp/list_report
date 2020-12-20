@@ -1,5 +1,4 @@
-1;Riant Fajaryanto;mriantf@gmail.com;JS Luwansa Monthly Report;Monthly;ether1.rrd;RO.JAK.LUWANSA - Traffic - ether9-Mainlink;Weeks
-2;Muhamrii;muhamrii@gmail.com;kaka;Weekly;ether1.rrd;WAN;Weeks
-2;Muhamrii;muhamrii@gmail.com;kaka;Weekly;ether2.rrd;LAN;Weeks
-2;Muhamrii;muhamrii@gmail.com;kaka;Weekly;ether3.rrd;OFFICE;Weeks
-3;Sarung Gajah;sarung@gajah.com;testing;Daily;jos.rrd;WAN;Days
+25;Riant Fajaryanto;mriantf@gmail.com;Daily Report Riant;Daily;ro_bek_aneka_traffic_in_25.rrd;RO.BEK.ANEKA - Traffic - ether1;Days
+25;Riant Fajaryanto;mriantf@gmail.com;Daily Report Riant;Daily;ro_jak_lws_traffic_in_27.rrd;RO.JAK.LWS - Traffic - ether1-Guest-Room;Days
+28;Muhamad Riant;muhamad@riantf.id;Weekly Report Riant;Weekly;ro_jak_ofc_traffic_in_18.rrd;RO.JAK.OFC - Traffic - ether1;Days
+28;Muhamad Riant;muhamad@riantf.id;Weekly Report Riant;Weekly;ro_jak_cr1_traffic_in_9.rrd;RO.JAK.CR1 - Traffic - Te0/1/0.260;Days
