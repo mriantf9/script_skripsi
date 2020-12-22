@@ -29,7 +29,7 @@ do
     while IFS='' read -r line || [ "$line" ]
     do
         echo "Move ${i} to ${QDTL}"
-        echo '%s\n' "$line" >> ${QDTL}/${i}
+        echo "$line" >> ${QDTL}/${i}
         rm -rf ${QUEUE}/${i}
 
         echo "process rsync ${i} ..."
