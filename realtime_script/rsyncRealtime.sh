@@ -38,3 +38,5 @@ do
 done
 
 rm -rf ${DIR}/REALTIME_QUEUE/tmp_list
+
+ssh mriantf@27.131.3.177 ${WORKDIR}/realtime_script/getGraphRealtime.sh
